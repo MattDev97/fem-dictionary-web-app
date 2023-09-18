@@ -1,23 +1,35 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import { Row, Col, Container } from 'reactstrap';
+
+import Header from './header/Header';
 
 function App() {
+  const [users, setUsers] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Fetch data from API when the component mounts
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(response => response.json())
+      .then(data => {
+        setUsers(data);
+        setIsLoading(false);
+      })
+      .catch(error => {
+        console.error("There was a problem with the fetch operation:", error);
+        setIsLoading(false);
+      });
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container className="px-4">
+        <Header></Header>
+      </Container>
+      
     </div>
   );
 }
