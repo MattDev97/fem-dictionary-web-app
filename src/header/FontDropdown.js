@@ -17,16 +17,16 @@ function FontDropdown() {
     const toggle = () => setDropdownOpen(prevState => !prevState);
     
     return (
-        <div className="dropdown-wrapper">
+        <div data-isactive={dropdownOpen} className="dropdown-wrapper">
             <Row className="d-flex" onClick={toggle}>
                 <Col xs="auto" className="d-flex">
                     <div className="m-auto selected-text">{selectedFont}</div>
                 </Col>
-                <Col className="d-flex" xs="auto">
+                <Col className="d-flex ps-0" xs="auto">
                     <img src={caretSVG}></img>
                 </Col>
             </Row>
-            <div data-isactive={dropdownOpen} className="dropdown-menu-wrapper px-3 pt-1 pb-3">
+            <div className="dropdown-menu-wrapper px-3 pt-1 pb-3">
                 {
                     fonts.map((font, index) => {
                         return (
