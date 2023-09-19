@@ -1,9 +1,9 @@
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import { Row, Col, Container } from 'reactstrap';
+import React, { useState } from 'react';
+import { Row, Col } from 'reactstrap';
 import './FontDropdown.css';
 
 import caretSVG from '../fem-files/assets/images/icon-arrow-down.svg';
-import React, { useState } from 'react';
+
 
 function FontDropdown() {
     let fonts = [

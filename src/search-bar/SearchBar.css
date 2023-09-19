@@ -1,0 +1,52 @@
+input::placeholder {
+    font-weight: 500;
+    opacity: 0.25;
+}
+::-moz-placeholder {
+    opacity: 0.25;
+opacity: 1;
+}
+::-moz-placeholder {
+    opacity: 0.25;
+opacity: 1;
+}
+:-ms-input-placeholder {
+    opacity: 0.25;
+}
+
+.search-bar {
+    position: relative;
+}
+
+.search-input {
+    width: 100%;
+    font-size: 20px;
+    background-color: var(--black-40);
+    border-radius: 16px;
+    outline: solid 1px var(--black-40);
+    border: none;
+
+    padding: 16px;
+
+    transition: outline 0.3s;
+}
+
+.search-input[data-hasError="true"] {
+    outline: solid 1px var(--red);
+}
+
+.search-input[data-hasError="false"]:focus {
+    outline: solid 1px var(--purple);
+}
+
+.search-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.error-msg {
+    color: var(--red);
+    font-size: 20px;
+}

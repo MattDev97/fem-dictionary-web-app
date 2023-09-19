@@ -1,0 +1,23 @@
+.subtitle {
+    color: var(--black-60);
+}
+
+ul {
+    font-size: 18px;
+}
+
+ul li::marker {
+    color: var(--purple);
+    font-size: 13px;
+    margin-right: 5px;
+}
+
+
+.synonym {
+    color: var(--purple);
+    cursor: pointer;
+}
+
+.synonym:hover {
+    text-decoration: underline;
+}

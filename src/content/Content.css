@@ -1,0 +1,24 @@
+.no-definitions-found {
+    text-align: center;
+}
+
+.frownie-face {
+    font-size: 72px;
+}
+
+.phonetic {
+    color: var(--purple);
+}
+p {
+    color: var(--black-60);
+}
+
+.divider {
+    background: linear-gradient(var(--black-40), var(--black-40)) no-repeat center/100% 2px;
+    min-height: 50px;
+}
+
+.source-urls p {
+    color: black;
+    font-size: 14px;
+}
