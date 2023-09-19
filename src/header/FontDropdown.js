@@ -6,18 +6,40 @@ import caretSVG from '../fem-files/assets/images/icon-arrow-down.svg';
 import React, { useState } from 'react';
 
 function FontDropdown() {
+    let fonts = [
+        'Sans Serif',
+        'Serif',
+        'Mono'
+    ]
     const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [selectedFont, setSelectedFont] = useState('Sans Serif');
 
     const toggle = () => setDropdownOpen(prevState => !prevState);
+    
     return (
-        <Row className="d-flex">
-            <Col xs="auto" className="d-flex">
-                <div className="m-auto selected-text">Sans Serif</div>
-            </Col>
-            <Col className="d-flex" xs="auto">
-                <img src={caretSVG}></img>
-            </Col>
-        </Row>
+        <div className="dropdown-wrapper">
+            <Row className="d-flex" onClick={toggle}>
+                <Col xs="auto" className="d-flex">
+                    <div className="m-auto selected-text">{selectedFont}</div>
+                </Col>
+                <Col className="d-flex" xs="auto">
+                    <img src={caretSVG}></img>
+                </Col>
+            </Row>
+            <div data-isactive={dropdownOpen} className="dropdown-menu-wrapper px-3 pt-1 pb-3">
+                {
+                    fonts.map((font, index) => {
+                        return (
+                            <div onClick={() => { setSelectedFont(font); toggle(); }} className="dropdown-menu-item pt-2">{font}</div>
+                        )
+                    })
+                }
+                {/* <div onClick={() => setSelectedFont('Sans Serif')} className="dropdown-menu-item pt-2">Sans Serif</div>
+                <div onClick={setSelectedFont} className="dropdown-menu-item pt-2">Serif</div>
+                <div className="dropdown-menu-item pt-2">Mon</div> */}
+            </div>
+        </div>
+        
         // <Dropdown isOpen={dropdownOpen} toggle={toggle}>
         //     <DropdownToggle caret className="custom-dropdown-toggle">
         //         <Row>
