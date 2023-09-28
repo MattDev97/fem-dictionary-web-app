@@ -1,6 +1,6 @@
 import './SearchBar.css';
 import React, { useState, useEffect, useRef } from 'react';
-import searchIcon from '../fem-files/assets/images/icon-search.svg';
+import searchIcon from '../../fem-files/assets/images/icon-search.svg';
 
 function SearchBar({ onValueChange }) {
     const [hasError, setHasError] = useState(false);

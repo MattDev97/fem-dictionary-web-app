@@ -37,7 +37,13 @@ img {
     transform: rotate(180deg);
 }
 
+.dropdown-menu-item {
+    transition: 0.3s all;
+}
+
 .dropdown-menu-item:hover {
     cursor: pointer;
     color: var(--purple);
+
+    margin-left: 10px;
 }

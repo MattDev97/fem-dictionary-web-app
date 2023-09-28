@@ -13,6 +13,23 @@ p {
     color: var(--black-60);
 }
 
+a {
+    color: var(--black-60);
+    transition: 0.2s all;
+}
+
+a:hover {
+    color: var(--purple);
+}
+
+.play-button {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.play-button:hover {
+    transform: scale(1.1);
+}
+
 .divider {
     background: linear-gradient(var(--black-40), var(--black-40)) no-repeat center/100% 2px;
     min-height: 50px;

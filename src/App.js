@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Row, Col, Container } from 'reactstrap';
 
 import Header from './header/Header';
-import SearchBar from './search-bar/SearchBar';
+import SearchBar from './Utilities/search-bar/SearchBar';
 import Content from './content/Content';
 
 function App() {

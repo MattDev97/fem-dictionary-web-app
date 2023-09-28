@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Row, Col } from 'reactstrap';
 import './FontDropdown.css';
 
-import caretSVG from '../fem-files/assets/images/icon-arrow-down.svg';
+import caretSVG from '../../fem-files/assets/images/icon-arrow-down.svg';
 
 
 function FontDropdown() {

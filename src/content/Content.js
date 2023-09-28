@@ -1,10 +1,26 @@
+import React, { useState, useEffect } from 'react';
+
 import './Content.css';
 import { Row, Col } from 'reactstrap';
-import playButtonSVG from '../fem-files/assets/images/icon-play.svg';
+import newWindowIcon from '../fem-files/assets/images/icon-new-window.svg';
 
 import Meaning from './meaning/Meaning';
+import PlayButton from './PlayButton/PlayButton';
 
 function Content({ definition }) {
+
+    const [audioUrl, setAudioUrl] = useState('');  
+    
+    useEffect(() => {
+        if (definition) {
+            let phonetic = definition.phonetics.find((phonetic) => {
+                return phonetic?.audio && phonetic?.audio !== '';
+            });
+            setAudioUrl(phonetic?.audio);
+        }
+    }, [definition]);  // This effect runs whenever 'definition' prop changes
+
+
     if (!definition) {
         return (
             <div className="mt-5 no-definitions-found">
@@ -32,9 +48,9 @@ function Content({ definition }) {
                     </Row>
                     
                 </Col>
-                <Col className="d-flex" xs="auto">
-                    <img src={playButtonSVG}></img>
-                </Col>
+
+                {/* <PlayButton src={audioUrl}></PlayButton>
+                 */}
             </Row>
             {definition.meanings.map((meaning, index) => {
                 return (
@@ -51,7 +67,18 @@ function Content({ definition }) {
                     <p>Source</p>
                 </Col>
                 <Col className="source-urls">
-                    <p>{definition.sourceUrls[0]}</p>
+                    {
+                        definition.sourceUrls.map((url, index) => {
+                            return (
+                                <Row>
+                                    <a href={url}>
+                                        {url}
+                                        <img className="ml-3" src={newWindowIcon}></img>
+                                    </a>
+                                </Row>
+                            )
+                        })
+                    }
                 </Col>
             </Row>
         </div>
