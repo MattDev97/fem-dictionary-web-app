@@ -1,23 +1,25 @@
 {
   "files": {
-    "main.css": "/fem-dictionary-web-app/static/css/main.ca2232e4.css",
-    "main.js": "/fem-dictionary-web-app/static/js/main.acc821f8.js",
+    "main.css": "/fem-dictionary-web-app/static/css/main.dbacc9cf.css",
+    "main.js": "/fem-dictionary-web-app/static/js/main.5d883596.js",
     "static/js/787.e68dbd68.chunk.js": "/fem-dictionary-web-app/static/js/787.e68dbd68.chunk.js",
     "static/media/Inter-VariableFont_slnt_wght.ttf": "/fem-dictionary-web-app/static/media/Inter-VariableFont_slnt_wght.aadb65ac45347ff46699.ttf",
     "static/media/Inconsolata-VariableFont_wdth_wght.ttf": "/fem-dictionary-web-app/static/media/Inconsolata-VariableFont_wdth_wght.1f56ee050cf1f63c7314.ttf",
     "static/media/Lora-Italic-VariableFont_wght.ttf": "/fem-dictionary-web-app/static/media/Lora-Italic-VariableFont_wght.731176b1f393de411b4f.ttf",
     "static/media/Lora-VariableFont_wght.ttf": "/fem-dictionary-web-app/static/media/Lora-VariableFont_wght.08d5a3eb917fa40a7168.ttf",
     "index.html": "/fem-dictionary-web-app/index.html",
+    "static/media/icon-new-window.svg": "/fem-dictionary-web-app/static/media/icon-new-window.17ac2f0f91916515096e759611fdaea9.svg",
     "static/media/logo.svg": "/fem-dictionary-web-app/static/media/logo.afbe15e827b060eab1c775e3afad2b73.svg",
+    "static/media/icon-moon.svg": "/fem-dictionary-web-app/static/media/icon-moon.fd52e618de9fdb62d0edd814557c07e3.svg",
     "static/media/icon-search.svg": "/fem-dictionary-web-app/static/media/icon-search.13357ba7763bb4388cba203d0388c375.svg",
     "static/media/icon-play.svg": "/fem-dictionary-web-app/static/media/icon-play.a659db0104303a8b8ae071e0cf90119d.svg",
     "static/media/icon-arrow-down.svg": "/fem-dictionary-web-app/static/media/icon-arrow-down.aa902848ffe2b4ed5369af17076de50d.svg",
-    "main.ca2232e4.css.map": "/fem-dictionary-web-app/static/css/main.ca2232e4.css.map",
-    "main.acc821f8.js.map": "/fem-dictionary-web-app/static/js/main.acc821f8.js.map",
+    "main.dbacc9cf.css.map": "/fem-dictionary-web-app/static/css/main.dbacc9cf.css.map",
+    "main.5d883596.js.map": "/fem-dictionary-web-app/static/js/main.5d883596.js.map",
     "787.e68dbd68.chunk.js.map": "/fem-dictionary-web-app/static/js/787.e68dbd68.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca2232e4.css",
-    "static/js/main.acc821f8.js"
+    "static/css/main.dbacc9cf.css",
+    "static/js/main.5d883596.js"
   ]
 }
