@@ -1,6 +1,5 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { Row, Col } from 'reactstrap';
-import { Howl } from 'howler';
+import React, { useState } from 'react';
+import { Col } from 'reactstrap';
 
 import playButtonSVG from '../../fem-files/assets/images/icon-play.svg';
 
