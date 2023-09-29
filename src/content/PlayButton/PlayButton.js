@@ -1,28 +1,45 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Row, Col } from 'reactstrap';
+import { Howl } from 'howler';
 
 import playButtonSVG from '../../fem-files/assets/images/icon-play.svg';
 
-export default function PlayButton({ src }) {
-    const audioRef = useRef(null);
-    const [isPlaying, setIsPlaying] = useState(false);
+export default function PlayButton({ url }) {
 
-    const togglePlayPause = () => {
-        if (isPlaying) {
-          audioRef.current.pause();
-        } else {
-          audioRef.current.play();
-        }
-        setIsPlaying(!isPlaying);
-      };
+	const [playing, setPlaying] = useState(false);
+	const [source, setSource] = useState(null);
 
-  return (
-    <Col data-active={isPlaying} onClick={togglePlayPause} className="d-flex play-button" xs="auto">
-        <img src={playButtonSVG}></img>
-        <audio ref={audioRef}>
-            <source src={src} type="audio/mp3" />
-            Your browser does not support the audio element.
-      </audio>
-    </Col>
-  )
+	const loadAudio = async () => {
+		let audioContextW = new (window.AudioContext || window.webkitAudioContext)();
+		let arrayBufferW = null;
+		let audioBufferW = null;
+
+		const response = await fetch(url);
+		arrayBufferW = await response.arrayBuffer();
+		audioContextW.decodeAudioData(arrayBufferW, (buffer) => {
+			audioBufferW = buffer;
+			
+			const src = audioContextW.createBufferSource();
+			src.buffer = audioBufferW;
+			src.connect(audioContextW.destination);
+			src.start(0);
+			setSource(src);
+			setPlaying(true);
+		});
+	};
+
+	const togglePlay = async () => {
+		if (playing) {
+			source.stop();
+			setPlaying(false);
+		} else {
+			await loadAudio();
+		}
+	};
+
+	return (
+		<Col onClick={() => {togglePlay()}} className="d-flex play-button" xs="auto">
+			<img src={playButtonSVG}></img>
+		</Col>
+	)
 }

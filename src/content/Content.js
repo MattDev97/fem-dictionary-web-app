@@ -49,8 +49,8 @@ function Content({ definition }) {
                     
                 </Col>
 
-                {/* <PlayButton src={audioUrl}></PlayButton>
-                 */}
+                <PlayButton url={audioUrl}></PlayButton>
+                
             </Row>
             {definition.meanings.map((meaning, index) => {
                 return (
