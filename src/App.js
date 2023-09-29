@@ -11,13 +11,14 @@ import SearchBar from './Utilities/search-bar/SearchBar';
 import Content from './content/Content';
 
 function App() {
-    const [users, setUsers] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [dataDefinition, setDataDefinition] = useState(null);
+    const [searchTerm, setSearchTerm] = useState('airplane');
 
-    let renderContentElement = '';
+    const [theme, setTheme] = useState('light'); // default theme
+
     const handleValueChange = (value) => {
-
+        setSearchTerm(value);
         setIsLoading(true);
         // Fetch data from API when the component mounts
         fetch('https://api.dictionaryapi.dev/api/v2/entries/en/' + value)
@@ -46,15 +47,19 @@ function App() {
             });
     }
 
+    const handleThemeChange = (theme) => {
+        setTheme(theme);
+    }
+
     return (
-        <div className="App">
+        <div data-theme={theme} className="App">
             <Container className="px-4">
-                <Header></Header>
-                <SearchBar onValueChange={handleValueChange}></SearchBar>
+                <Header onThemeChange={handleThemeChange}></Header>
+                <SearchBar searchTerm={searchTerm} onValueChange={handleValueChange}></SearchBar>
                 {isLoading ? 
                     <Row className="loading-spinner align-content-center d-flex">
                         <Col className="justify-content-center d-flex">
-                            <DotPulse color="var(--black)"></DotPulse>
+                            <DotPulse color="var(--purple)"></DotPulse>
                         </Col>
                     </Row> 
                     : 

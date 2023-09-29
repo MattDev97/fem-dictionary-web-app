@@ -6,9 +6,7 @@ import './Header.css';
 import FontDropdown from '../Utilities/FontDropdown/FontDropdown';
 import ToggleSwitch from '../Utilities/ToggleSwitch/ToggleSwitch';
 
-const label = { inputProps: { 'aria-label': 'Switch demo' } };
-
-function Header() {
+function Header({ onThemeChange }) {
     return (
         <Row className="justify-content-between py-4">
             <Col xs="auto">
@@ -22,7 +20,7 @@ function Header() {
                     <Col xs="auto">
                         <Row className="align-items-center">
                             <Col className="d-flex">
-                                <ToggleSwitch></ToggleSwitch>
+                                <ToggleSwitch onChange={(value) => onThemeChange(value ? 'dark' : 'light')}></ToggleSwitch>
                             </Col>
                             <Col className="p-0">
                                 <img src={moonSVG}></img>

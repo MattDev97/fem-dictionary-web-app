@@ -32,48 +32,65 @@ function Meaning({ meaning }) {
                     <ul>
                         {meaning.definitions.map((definition, index) => {
                             return (
-                                <li className="my-1">{definition.definition}</li>
+                                <div className="definition-wrapper">
+                                    <li className="my-3">{definition.definition}</li>
+                                    {
+                                        definition.example ? 
+                                        <div className="example-wrapper">
+                                            "{definition.example}""
+                                        </div>
+                                        :
+                                        null
+                                    }
+                                </div>
+                                
                             )
                         })}
                     </ul>
                 </Col>
             </Row>
-            <Row className="mt-3">
-                <Col xs="auto">
-                    <h3 className="subtitle">Synonyms</h3>
-                </Col>
-                <Col xs="auto">
-                    <Row>
-                        {
-                            meaning.synonyms.map((synonym, index) => {
-                                return (
-                                    <Col xs="auto" className="synonym">
-                                        <h3>{synonym}</h3>
-                                    </Col>
-                                )
-                            })
-                        }
-                    </Row>
-                </Col>
-            </Row>
-            <Row className="mt-3">
-                <Col xs="auto">
-                    <h3 className="subtitle">Antonyms</h3>
-                </Col>
-                <Col xs="auto">
-                    <Row>
-                        {
-                            meaning.antonyms.map((synonym, index) => {
-                                return (
-                                    <Col xs="auto" className="synonym">
-                                        <h3>{synonym}</h3>
-                                    </Col>
-                                )
-                            })
-                        }
-                    </Row>
-                </Col>
-            </Row>
+            {
+                meaning.synonyms && meaning.synonyms.length > 0 ?
+                    <Row className="mt-3">
+                        <Col xs="auto">
+                            <h3 className="subtitle">Synonyms</h3>
+                        </Col>
+                        <Col xs="auto">
+                            <Row>
+                                {
+                                    meaning.synonyms.map((synonym, index) => {
+                                        return (
+                                            <Col xs="auto" className="synonym">
+                                                <h3>{synonym}</h3>
+                                            </Col>
+                                        )
+                                    })
+                                }
+                            </Row>
+                        </Col>
+                    </Row> : null
+            }
+            {
+                meaning.antonyms && meaning.antonyms.length > 0 ?
+                    <Row className="mt-3">
+                        <Col xs="auto">
+                            <h3 className="subtitle">Antonyms</h3>
+                        </Col>
+                        <Col xs="auto">
+                            <Row>
+                                {
+                                    meaning.antonyms.map((antonym, index) => {
+                                        return (
+                                            <Col xs="auto" className="antonym">
+                                                <h3>{antonym}</h3>
+                                            </Col>
+                                        )
+                                    })
+                                }
+                            </Row>
+                        </Col>
+                    </Row> : null
+            }
         </div>
         
     )

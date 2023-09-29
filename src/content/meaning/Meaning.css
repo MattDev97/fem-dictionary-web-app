@@ -21,3 +21,7 @@ ul li::marker {
 .synonym:hover {
     text-decoration: underline;
 }
+
+.example-wrapper {
+    color: var(--black-60);
+}

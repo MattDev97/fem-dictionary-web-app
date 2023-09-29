@@ -29,6 +29,8 @@ opacity: 1;
     padding: 16px;
 
     transition: outline 0.3s;
+
+    color: var(--black);
 }
 
 .search-input[data-hasError="true"] {
