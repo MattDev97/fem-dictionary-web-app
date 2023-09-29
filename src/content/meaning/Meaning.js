@@ -37,7 +37,7 @@ function Meaning({ meaning }) {
                                     {
                                         definition.example ? 
                                         <div className="example-wrapper">
-                                            "{definition.example}""
+                                            "{definition.example}"
                                         </div>
                                         :
                                         null
