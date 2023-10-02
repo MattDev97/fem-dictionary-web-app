@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Col } from 'reactstrap';
 
-import playButtonSVG from '../../fem-files/assets/images/icon-play.svg';
+import playButtonSVG from '../../../Assets/fem-files/assets/images/icon-play.svg';
 
 export default function PlayButton({ url }) {
 

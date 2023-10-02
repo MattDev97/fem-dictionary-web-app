@@ -1,10 +1,10 @@
 import { Row, Col } from 'reactstrap';
-import logoSVG from '../fem-files/assets/images/logo.svg';
-import moonSVG from '../fem-files/assets/images/icon-moon.svg';
+import logoSVG from '../../Assets/fem-files/assets/images/logo.svg';
+import moonSVG from '../../Assets/fem-files/assets/images/icon-moon.svg';
 import './Header.css';
 
-import FontDropdown from '../Utilities/FontDropdown/FontDropdown';
-import ToggleSwitch from '../Utilities/ToggleSwitch/ToggleSwitch';
+import FontDropdown from '../../Utilities/FontDropdown/FontDropdown';
+import ToggleSwitch from '../../Utilities/ToggleSwitch/ToggleSwitch';
 
 function Header({ onThemeChange }) {
     return (

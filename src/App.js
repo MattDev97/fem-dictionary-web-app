@@ -6,9 +6,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Row, Col, Container } from 'reactstrap';
 
-import Header from './header/Header';
-import SearchBar from './Utilities/search-bar/SearchBar';
-import Content from './content/Content';
+import Header from './Components/Header/Header';
+import SearchBar from './Utilities/SearchBar/SearchBar';
+import Content from './Components/Content/Content';
 
 function App() {
     const [isLoading, setIsLoading] = useState(true);
@@ -63,8 +63,8 @@ function App() {
                         </Col>
                     </Row> 
                     : 
-                    <Content definition={dataDefinition}></Content>}
-                
+                    <Content definition={dataDefinition}></Content>
+                }
             </Container>
 
         </div>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Row, Col } from 'reactstrap';
 import './FontDropdown.css';
 
-import caretSVG from '../../fem-files/assets/images/icon-arrow-down.svg';
+import caretSVG from '../../Assets/fem-files/assets/images/icon-arrow-down.svg';
 
 
 function FontDropdown() {
@@ -34,33 +34,8 @@ function FontDropdown() {
                         )
                     })
                 }
-                {/* <div onClick={() => setSelectedFont('Sans Serif')} className="dropdown-menu-item pt-2">Sans Serif</div>
-                <div onClick={setSelectedFont} className="dropdown-menu-item pt-2">Serif</div>
-                <div className="dropdown-menu-item pt-2">Mon</div> */}
             </div>
         </div>
-        
-        // <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-        //     <DropdownToggle caret className="custom-dropdown-toggle">
-        //         <Row>
-        //             <Col xs="auto">
-        //                 <p>Sans Serif</p>
-        //             </Col>
-        //             <Col xs="auto">
-        //                 <img src={caretSVG}></img>
-        //             </Col>
-        //         </Row>
-                
-                
-        //     </DropdownToggle>
-        //     <DropdownMenu className="custom-dropdown-menu">
-        //         <DropdownItem header className="custom-dropdown-item">Header</DropdownItem>
-        //         <DropdownItem className="custom-dropdown-item">Some Action</DropdownItem>
-        //         <DropdownItem className="custom-dropdown-item">Another Action</DropdownItem>
-        //         <DropdownItem divider />
-        //         <DropdownItem className="custom-dropdown-item">Separated Action</DropdownItem>
-        //     </DropdownMenu>
-        // </Dropdown>
     )
 }
 

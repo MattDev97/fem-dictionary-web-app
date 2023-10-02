@@ -1,16 +1,6 @@
 import { Row, Col } from 'reactstrap';
 import './Meaning.css';
 function Meaning({ meaning }) {
-
-    // const getSynonyms = (meaning) => {
-    //     let synonyms = [];
-    //     meaning.meanings.map((definition) => {
-    //         definition.synonyms.map((synonym) => {
-    //             synonyms.push(synonym);
-    //         })
-    //     });
-    //     return synonyms;
-    // }
     return (
         <div className="meaning-wrapper">
             <Row>

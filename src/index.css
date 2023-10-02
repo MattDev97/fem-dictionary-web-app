@@ -1,20 +1,20 @@
 @font-face {
   font-family: 'Lora';
   src: local('Lora'),
-       url('./fonts/lora/Lora-Italic-VariableFont_wght.ttf') format('truetype'),
-       url('./fonts/lora/Lora-VariableFont_wght.ttf') format('truetype');
+       url('./Assets/fonts/lora/Lora-Italic-VariableFont_wght.ttf') format('truetype'),
+       url('./Assets/fonts/lora/Lora-VariableFont_wght.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Inter';
   src: local('Inter'),
-       url('./fonts/inter/Inter-VariableFont_slnt_wght.ttf') format('truetype');
+       url('./Assets/fonts/inter/Inter-VariableFont_slnt_wght.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Inconsolata';
   src: local('Inconsolata'),
-       url('./fonts/inconsolata/Inconsolata-VariableFont_wdth_wght.ttf') format('truetype');
+       url('./Assets/fonts/inconsolata/Inconsolata-VariableFont_wdth_wght.ttf') format('truetype');
 }
 
 body {

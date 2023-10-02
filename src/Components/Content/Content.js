@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 
 import './Content.css';
 import { Row, Col } from 'reactstrap';
-import newWindowIcon from '../fem-files/assets/images/icon-new-window.svg';
+import newWindowIcon from '../../Assets/fem-files/assets/images/icon-new-window.svg';
 
-import Meaning from './meaning/Meaning';
+import Meaning from './Meaning/Meaning';
 import PlayButton from './PlayButton/PlayButton';
 
 function Content({ definition }) {
