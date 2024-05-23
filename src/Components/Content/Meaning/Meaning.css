@@ -8,8 +8,7 @@ ul {
 
 ul li::marker {
     color: var(--purple);
-    font-size: 13px;
-    margin-right: 5px;
+    font-size: 15px;
 }
 
 

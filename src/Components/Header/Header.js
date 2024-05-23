@@ -6,7 +6,7 @@ import './Header.css';
 import FontDropdown from '../../Utilities/FontDropdown/FontDropdown';
 import ToggleSwitch from '../../Utilities/ToggleSwitch/ToggleSwitch';
 
-function Header({ onThemeChange }) {
+function Header({ onThemeChange, onFontChange }) {
     return (
         <Row className="justify-content-between py-4">
             <Col xs="auto">
@@ -15,7 +15,7 @@ function Header({ onThemeChange }) {
             <Col xs="auto">
                 <Row>
                     <Col xs="auto" className="m-auto divider_right">
-                        <FontDropdown></FontDropdown>
+                        <FontDropdown onChange={(font) => onFontChange(font)}></FontDropdown>
                     </Col>
                     <Col xs="auto">
                         <Row className="align-items-center">

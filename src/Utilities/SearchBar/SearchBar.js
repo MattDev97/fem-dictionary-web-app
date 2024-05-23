@@ -36,7 +36,7 @@ function SearchBar({ onValueChange }) {
         clearTimeout(timeoutRef.current);  // Clear the existing timer
         timeoutRef.current = setTimeout(() => {
             onValueChange(inputValue);
-        }, 2000);
+        }, 1000);
     }, [inputValue]);
 
 

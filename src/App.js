@@ -16,6 +16,7 @@ function App() {
     const [searchTerm, setSearchTerm] = useState('airplane');
 
     const [theme, setTheme] = useState('light'); // default theme
+	const [typeFace, setTypeFace] = useState('Sans Serif'); // default font style
 
     const handleValueChange = (value) => {
         setSearchTerm(value);
@@ -51,10 +52,14 @@ function App() {
         setTheme(theme);
     }
 
+	const handleFontChange = (font) => {
+		setTypeFace(font);
+	}
+
     return (
-        <div data-theme={theme} className="App">
+        <div data-theme={theme} data-type-face={typeFace} className="App">
             <Container className="px-4">
-                <Header onThemeChange={handleThemeChange}></Header>
+                <Header onThemeChange={handleThemeChange} onFontChange={handleFontChange}></Header>
                 <SearchBar searchTerm={searchTerm} onValueChange={handleValueChange}></SearchBar>
                 {isLoading ? 
                     <Row className="loading-spinner align-content-center d-flex">

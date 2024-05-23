@@ -5,7 +5,7 @@ import './FontDropdown.css';
 import caretSVG from '../../Assets/fem-files/assets/images/icon-arrow-down.svg';
 
 
-function FontDropdown() {
+function FontDropdown({onChange}) {
     let fonts = [
         'Sans Serif',
         'Serif',
@@ -28,9 +28,9 @@ function FontDropdown() {
             </Row>
             <div className="dropdown-menu-wrapper px-3 pt-1 pb-3">
                 {
-                    fonts.map((font, index) => {
+                    fonts.map((font) => {
                         return (
-                            <div onClick={() => { setSelectedFont(font); toggle(); }} className="dropdown-menu-item pt-2">{font}</div>
+                            <div onClick={() => { setSelectedFont(font); toggle(); onChange(font); }} className="dropdown-menu-item pt-2" data-type-face={font}>{font}</div>
                         )
                     })
                 }

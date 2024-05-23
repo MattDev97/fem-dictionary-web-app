@@ -4,6 +4,19 @@
 	}
 }
 
+@font-face {
+	font-family: 'inconsolata';
+	src: url('./Assets/fonts/inconsolata/Inconsolata-VariableFont_wdth_wght.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'inter';
+	src: url('./Assets/fonts/inter/Inter-VariableFont_slnt_wght.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'lora';
+	src: url('./Assets/fonts/lora/Lora-VariableFont_wght.ttf') format('truetype');
+}
+
 .App[data-theme="light"] {
 	--black: #050505;
 	--black-90: #1F1F1F;
@@ -16,6 +29,8 @@
 
 	--purple: #A445ED;
 	--red: #FF5252;
+
+	--shadow: var(--black-50);
 }
 
 .App[data-theme="dark"] {
@@ -31,8 +46,20 @@
 	--purple: #A445ED;
 	--red: #FF5252;
 
+	--shadow: #A445ED;
+
 	background-color: var(--white);
 	color: var(--black);
+}
+
+.App[data-type-face="San Serif"] {
+	font-family: 'inter', sans-serif;
+}
+.App[data-type-face="Serif"] {
+	font-family: 'lora', serif;
+}
+.App[data-type-face="Mono"] {
+	font-family: 'inconsolata', monospace;
 }
 
 .App {
@@ -47,14 +74,17 @@
 
 h1 {
 	font-size: 64px !important;
+	font-weight: bold !important;
 }
 
 h2 {
 	font-size: 24px !important;
+	/* font-weight: bold !important; */
 }
 
 h3 {
 	font-size: 20px !important;
+	/* font-weight: bold !important; */
 }
 
 p {

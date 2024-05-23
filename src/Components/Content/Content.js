@@ -18,7 +18,7 @@ function Content({ definition }) {
             });
             setAudioUrl(phonetic?.audio);
         }
-    }, [definition]);  // This effect runs whenever 'definition' prop changes
+    }, [definition]);
 
 
     if (!definition) {
@@ -71,9 +71,9 @@ function Content({ definition }) {
                         definition.sourceUrls.map((url, index) => {
                             return (
                                 <Row>
-                                    <a href={url}>
+                                    <a href={url} rel="noreferrer" target="_blank">
                                         {url}
-                                        <img className="ml-3" src={newWindowIcon}></img>
+                                        <img className="ms-3" src={newWindowIcon}></img>
                                     </a>
                                 </Row>
                             )
