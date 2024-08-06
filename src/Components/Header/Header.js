@@ -14,12 +14,12 @@ function Header({ onThemeChange, onFontChange }) {
             </Col>
             <Col xs="auto">
                 <Row>
-                    <Col xs="auto" className="m-auto divider_right">
+                    <Col xs="auto" className="m-auto divider_right px-3">
                         <FontDropdown onChange={(font) => onFontChange(font)}></FontDropdown>
                     </Col>
                     <Col xs="auto">
                         <Row className="align-items-center">
-                            <Col className="d-flex">
+                            <Col className="d-flex mx-1">
                                 <ToggleSwitch onChange={(value) => onThemeChange(value ? 'dark' : 'light')}></ToggleSwitch>
                             </Col>
                             <Col className="p-0">
