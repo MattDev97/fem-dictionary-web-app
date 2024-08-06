@@ -23,7 +23,7 @@ function FontDropdown({onChange}) {
                     <div className="m-auto selected-text">{selectedFont}</div>
                 </Col>
                 <Col className="d-flex ps-0" xs="auto">
-                    <img src={caretSVG}></img>
+                    <img className="dropdown-menu_caret" src={caretSVG}></img>
                 </Col>
             </Row>
             <div className="dropdown-menu-wrapper px-3 pt-1 pb-3">

@@ -32,8 +32,9 @@
     opacity: 1;
     max-height: 185px;
 }
-img {
-    transition: transform 0.3s;
+.dropdown-menu_caret {
+	transition: all 0.3s;
+	max-width: 15px;
 }
 [data-isactive="true"] img {
     transform: rotate(180deg);
