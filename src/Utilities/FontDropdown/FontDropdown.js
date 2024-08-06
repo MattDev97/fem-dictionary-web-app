@@ -7,12 +7,12 @@ import caretSVG from '../../Assets/fem-files/assets/images/icon-arrow-down.svg';
 
 function FontDropdown({onChange}) {
     let fonts = [
+		'Serif',
         'Sans Serif',
-        'Serif',
         'Mono'
     ]
     const [dropdownOpen, setDropdownOpen] = useState(false);
-    const [selectedFont, setSelectedFont] = useState('Sans Serif');
+    const [selectedFont, setSelectedFont] = useState('Serif');
 
     const toggle = () => setDropdownOpen(prevState => !prevState);
     

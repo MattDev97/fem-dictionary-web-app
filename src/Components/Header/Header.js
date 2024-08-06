@@ -8,7 +8,7 @@ import ToggleSwitch from '../../Utilities/ToggleSwitch/ToggleSwitch';
 
 function Header({ onThemeChange, onFontChange }) {
     return (
-        <Row className="justify-content-between py-4">
+        <Row className="justify-content-between py-5 my-2">
             <Col xs="auto">
                 <img src={logoSVG}></img>
             </Col>

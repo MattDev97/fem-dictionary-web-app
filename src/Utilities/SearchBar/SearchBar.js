@@ -6,7 +6,7 @@ function SearchBar({ onValueChange }) {
     const [hasError, setHasError] = useState(false);
     const [errorMsg, setErrorMsg] = useState('Whoops, can\'t be left empty...');
 
-    const [inputValue, setInputValue] = useState('airplane');
+    const [inputValue, setInputValue] = useState('keyboard');
     const timeoutRef = useRef(null);
 
     const getErrorElement = () => {

@@ -13,7 +13,7 @@ import Content from './Components/Content/Content';
 function App() {
     const [isLoading, setIsLoading] = useState(true);
     const [dataDefinition, setDataDefinition] = useState(null);
-    const [searchTerm, setSearchTerm] = useState('airplane');
+    const [searchTerm, setSearchTerm] = useState('keyboard');
 
     const [theme, setTheme] = useState('light'); // default theme
 	const [typeFace, setTypeFace] = useState('Sans Serif'); // default font style
@@ -58,7 +58,7 @@ function App() {
 
     return (
         <div data-theme={theme} data-type-face={typeFace} className="App">
-            <Container className="px-4">
+            <Container className="px-5">
                 <Header onThemeChange={handleThemeChange} onFontChange={handleFontChange}></Header>
                 <SearchBar searchTerm={searchTerm} onValueChange={handleValueChange}></SearchBar>
                 {isLoading ? 
